@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!-- 
+	1. header(머리) : 사이트 로고, 사이트명
+		 nav		    : 메뉴(링크)
+	2. section(몸통): 주요 문서 내용
+		 article     : 문서의 내용이 많은 경우, 세부적으로 구분하는 곳
+		 aside       : 문서의 주 내용을 제외하고, section의 좌우에 배치
+	3. footer(발)   : 사이트의 정보(주소, 전화번호), 저작권, 부가 정보 표시
+ -->
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- div가 아니라 명칭으로 적어서 구분할 수 있게 됨 exam08과 동일한 결과-->
+	<header>
+		<h2>우리대학 학과소개</h2>
+		<nav>
+			<ul>
+				<li><a href="#">국어국문학과</a></li>
+				<li><a href="#">영어영문학과</a></li>
+				<li><a href="#">중어중문학과</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	
+	
+	<!-- <b> = <strong> 
+		 <i> = <em>      
+		 <span> = <mark> 고정 노란색 -->
+	<section>
+		<article>
+			<h3>국어국문학과</h3>
+			안녕하세요. <strong>국어국문학과</strong> 입니다. 
+		</article>
+		<article>
+			<h3>영어영문학과</h3>
+			안녕하세요. <mark><b>영어영문학과</b></mark> 입니다.
+		</article>
+		<article>
+			<h3>중어중문학과</h3>
+			안녕하세요. <mark style="background-color:pink"><b>중어중문학과</b></mark> 입니다.
+		</article>
+	
+	</section><br><br><br><br>
+	
+	
+	
+	
+	<footer>
+		<div>
+			우리대학
+		</div>
+		<address>우리특별시 우리구 우리동 11-11 번호 02-1584-7807(~9)</address>
+		<!-- address는 기본적으로 이탤릭체를 가지고 있으므로 <i>써줄 필요 없음 -->
+	
+	</footer>
+	
+	
+	
+</body>
+</html>

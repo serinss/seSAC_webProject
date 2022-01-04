@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>줄 바꿈</title>
+</head>
+<body>
+	첫 번째<div></div> <!-- block 태그이므로 div를 사용해도 줄 넘김이 가능. 실제 일할 때에는 div로 씀(시간 투자 많이 필요)-->
+	두 번째<br /> <!-- br 태그 하나로 엔터 역할 -> 단독으로 쓰임(자신이 시작이며 종료이므로 /를 같은 곳에 넣기 -->
+	세 번째<br><!-- html 5 에서부터는 /슬래시를 생략할 수 있다! -->
+	네 번&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;째<br>
+	
+	<div style="background-color:pink">
+		첫 번째 문장입니다.<br>
+		두 번째 문장입니다.
+	</div>
+	<div style="background-color:pink">
+		첫 번째 문장입니다.<br>
+		두 번째 문장입니다.
+	</div>
+	<!-- div는 다른 단락도 계속 이어서 나옴 -->
+	
+	<p style="background-color: green">
+		첫 번째 문장입니다.<br>
+		두 번째 문장입니다.
+	</p>
+	<p style="background-color: green">
+		첫 번째 문장입니다.<br>
+		두 번째 문장입니다.
+	</p>
+	<!-- p는 한 단락마다 공백이 들어감 -->
+	
+	
+</body>
+</html>

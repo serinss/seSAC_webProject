@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>메뉴 선택하기</title>
+</head>
+<body>
+	<h2>우리분식 메뉴</h2>
+	
+	<select>
+		<option>떡볶이</option>
+		<option>김밥</option>
+		<option>김말이</option>
+		<option>오징어튀김</option>
+		<option>떡꼬치</option>
+	</select><br><br>
+	
+	<select size="3">
+		<option>떡볶이</option>
+		<option>김밥</option>
+		<option>김말이</option>
+		<option>오징어튀김</option>
+		<option selected="selected">떡꼬치</option>
+		 <!-- 제일 먼저 나오게 할 수 있음 / 속성 이름 = 속성값 인 경우, 속성 이름만 적어도 된다! selected만 적기 -->
+	</select><br><br>
+	
+	<select multiple><!-- ctrl 키로 여러개 선택할 수 있도록 가능함! -->
+		<option>떡볶이</option>
+		<option>김밥</option>
+		<option>김말이</option>
+		<option>오징어튀김</option>
+		<option>떡꼬치</option>
+	</select><br><br>
+	
+	<select>
+		<optgroup label="분식류">
+			<option>떡볶이</option>
+			<option>김밥</option>
+			<option>김말이</option>
+			<option>오징어튀김</option>
+		</optgroup>
+		<optgroup label="식사류">
+			<option>황금 볶음밥</option>
+			<option>깐풍기</option>
+			<option>가지 튀김</option>
+			<option>마라향궈</option>
+		</optgroup>
+	</select><br><br>
+	
+	
+	<!-- datalist를 사용하면 select처럼 바로 보이지는 않지만, input 에따라 나오는 리스트들을 설정할 수 있다
+		 김 검색하면 김이 포함된 글자들을 보여준다. -->
+	<input list="food1">
+	<datalist id="food1">
+		<option>떡볶이</option>
+		<option>김밥</option>
+		<option>김말이</option>
+		<option>오징어튀김</option>
+	</datalist>
+	<datalist id="food2">
+		<option>황금 볶음밥</option>
+		<option>깐풍기</option>
+		<option>가지 튀김</option>
+		<option>마라향궈</option>
+	</datalist><br><br>
+	
+</body>
+</html>
