@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 본문과 동일하게 표도 머리, 몸통, 발로 구성할 수 있다 tfoot은 tbody 위에 있어야 하지만, 아래 있어도 해석 가능-->
+	<table border="1" style="width:400px; height:400px;">
+		<caption>table thead, tbody, tfoot 예제</caption> <!-- 표 밖에 제목을 둘 수도 있음 -->
+		<col style="background-color:green"> <!-- 열 색상을 변경하고 싶을 경우 -->
+		<col>
+		<col span="2" style="background-color:lime">
+		<thead>
+			<tr>
+				<!-- th로 하면 자동으로 굵은 글씨 & 가운데 정렬 -->
+				<th>제목1</th>
+				<th>제목2</th>
+				<th>제목3</th>
+				<th>제목4</th>
+				<th>제목5</th>
+			</tr>
+		
+		</thead>
+		<tfoot> <!-- 코드 위치에 상관없이 무조건 마지막에 들어간다 -->
+			<tr>
+				<td colspan="5" align="center">table foot</td>
+			</tr>
+			
+		
+		</tfoot>
+		<tbody>
+			<tr style="background-color: gray">
+				<td>1-1</td>
+				<td>1-2</td>
+				<td>1-3</td>
+				<td>1-4</td>
+				<td>1-5</td>
+			</tr>
+			<tr style="background-color:pink">
+				<td>2-1</td>
+				<td>2-2</td>
+				<td>2-3</td>
+				<td>2-4</td>
+				<td>2-5</td>
+			</tr>
+		
+		</tbody>
+		
+	</table>
+
+</body>
+</html>

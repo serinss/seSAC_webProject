@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- 키보드 입력받기(form, input) -> 서버에 전달 -> 특정 코드 수행 -->
+	
+	<!-- type 속성   1.text(한 줄 입력) & textarea(여러 줄 입력, 종료태그 필요) 2.password(입력 시 암호처리) 3.checkbox(다중선택) 
+					  4.radio(단일 선택) 5.button(사용자 정의 이벤트) 6.file(첨부 파일) 7.reset(초기화) 
+					  8.hidden(입력받지 않은 데이터 전송) 
+					  9.submit(입력받은 모든 데이터를 최종적으로 전송) -->
+					  
+					  
+	<form action="http://www.naver.com">
+		아이디 &nbsp;&nbsp;&nbsp;: <input type="text" size="40"><br>
+		비밀번호 : <input type="password" size="40"><br><br><br>
+		
+		<strong>희망 연봉</strong><br>
+		<!-- 선택지 name 붙여서 한 그룹으로 묶어줄 수 있다 -> 이제 하나씩 변경하면서 선택 가능한 -->
+		<input type="radio" name="salary"> 2500~2800<br>
+		<input type="radio" name="salary"> 2800~3100<br>
+		<input type="radio" name="salary"> 3100~3400<br>
+		<input type="radio" name="salary"> 3400~3600<br>
+		<input type="radio" name="salary"> 3600~<br><br><br>
+		
+		<strong>사용 언어(중복 선택 가능)</strong><br>
+		<input type="checkbox" name="language"> C<br>
+		<input type="checkbox" name="language"> C++<br>
+		<input type="checkbox" name="language"> JAVA<br>
+		<input type="checkbox" name="language"> JAVASCRIPT<br>
+		<input type="checkbox" name="language"> SERVLET / JSP<br>
+		<input type="checkbox" name="language"> ASP<br>
+		<input type="checkbox" name="language"> PYTHON<br>
+		기타 : <input type="text" size="10"><br><br><br>
+		
+		<strong>취미(중복 선택 가능)</strong><br>
+		<input type="checkbox" name="hob"> 코딩<br>
+		<input type="checkbox" name="hob"> 디버깅<br>
+		<input type="checkbox" name="hob"> 독서<br>
+		기타 : <input type="text" size="10"><br><br><br>
+		
+		
+		<strong>자기 소개 (500자 이내)</strong><br>
+		<textarea rows="6" cols="40"></textarea>
+		<input type="reset" value="초기화"><br>
+		첨부파일 : <input type="file"><br><br><br>
+		<!-- 웹 브라우저에 따라서 나오는 형태가 약간씩 다름 참고(웹 브라우저와의 호환성!) chrome : 파일명 explorer : 파일경로 -->
+		
+		<input type="button" value="버튼"><!-- 이건 정해진 일이 없음 -> javascript와 연결하여 사용자 정의해줄 수 있음 -->
+		<input type="submit" value="최종 제출"> <!-- submit 쓰면 버튼이 생김 -->
+			
+		
+		<!-- HTML5 에서 새로 추가가 되었음 : <button> -->
+		<button type="submit">새로운 제출 버튼</button>
+		<button type="reset">새로운 초기화 버튼</button>
+		<button><img src="/Lecture-Web/html/images/submit.png" width="40" height="40"></button>
+		<!-- a tag 는 링크 이동, button은 submit의 역할을 하도록 만듦. -->
+		
+		
+		
+		
+		
+	</form>
+	
+	
+</body>
+</html>
