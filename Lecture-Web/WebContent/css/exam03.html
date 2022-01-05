@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/*div에 그릴 사각형의 속성을 정의해줄 수 있음
+	    영역 자체는 전체, 색상을 칠해줄 부분만 정의함
+	    
+	   좌측 상단 (0,0)=top,left	     top,right
+	   
+	              bottom,left    bottom,right
+	*/
+	div{
+		width: 150px;
+		height: 150px;
+		left: 50px;
+		/*position: static; /*지정 안하면 디폴트가 static - 바로바로 순서대로 이어붙어서 나오게 함 -> 이동문법 안먹힘!*/
+	}
+	
+	.red{
+		background-color : red
+	}
+	
+	.blue{
+		background-color : blue
+	}
+</style>
+</head>
+<body>
+	<!-- 100x100 사각형을 그리고 싶다 -->
+	<div class="red">첫 번째 사각형</div>
+	<div class="blue">두 번째 사각형</div>
+</body>
+</html>

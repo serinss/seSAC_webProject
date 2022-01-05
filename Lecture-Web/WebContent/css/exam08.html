@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		width: 100px; /*설정한 가로값은 100이지만 +padding(10)+border(2)+margin(10) = 전체 122으로 잡힘 
+						-> 개발자도구에서 확인 가능*/
+		margin: 10px;
+		padding: 10px;
+		text-align: center;
+		border: 1px solid purple;
+		/*width, style, color 한꺼번에 쓸 수 있음, 순서 중요 X*/
+	}
+	
+	.div01{
+		border-radius: 20px; /*꼭짓점의 각도를 조절할 수 있음 -> 반지름이 20px인 원을 기준으로 변경
+								반지름이 작아질수록 각도가 가파라짐, 반지름이 커질수록 각도가 완만해짐*/
+	}
+	
+	.div02{
+		border-radius: 20px;
+		border-bottom-left-radius:0; /*네 꼭지점 중 지정해줄 수 있음*/
+		border-bottom-right-radius:0;
+	}
+	
+	.div03{
+		border-bottom-left-radius: 20px;
+		border-bottom-right-radius:20px;
+		box-shadow: 10px 10px 5px 0px gray;
+		/*1.좌우 2.아래위 3.흐림정도 4.그림자범위 / 총4개를 지정할 수 있음 */
+	}
+	
+</style>
+</head>
+<body>
+	<div class="div01">1</div>
+	<div class="div02">2</div>
+	<div class="div03">3</div>
+	
+</body>
+</html>

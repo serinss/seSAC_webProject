@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>Insert title here</title>
+<!-- 전체 특정 태그들에 디자인이 들어가도록 head에 추가해놓을 수 있음 -->
+<!-- <style type="text/css">
+	css에서는 선택자가 중요함!!
+	선택자(적용할 태그 선택) {    -> *:모든 태그  적용, p:모든 p태그에만 적용
+						      	범위가 좁은 것이 더 우선순위가 높다!
+		하나만 있는 경우은 속성:값 (세미콜론X)
+		속성:값;
+		속성:값;
+	}
+	
+	-> 즉, <h2 style="color:pink">Hello World</h2> 로 입력 받고 있는 것
+</style>
+ -->
+ <style>
+ 	* {
+ 		color: pink
+ 	}
+ 	
+ 	p{
+ 		color : blue !important;
+ 		background-color : lightgray; 
+ 	}
+ 	
+ 	h2 {
+ 		/*color : green*/
+ 		/*color :rgb(255,204,204);*/
+ 		color : #FFCCCC
+ 		/*색상을 입력할 수 있는 방법 다양*/
+ 		
+ 	}
+ 	
+ 	p{
+ 		color : red
+ 	}
+ </style>
+ 
+</head>
+
+<body>
+	
+	<p>
+		Hello World
+	</p>
+	<p>
+		Hello World
+	</p>
+	<h2>Hello World</h2>
+
+
+
+</body>
+</html>
