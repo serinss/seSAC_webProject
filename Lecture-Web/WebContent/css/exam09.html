@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<!-- 구글 폰트를 사용하는 경우 맨 아래 링크만 <style> 위에 넣어주고, font-family 설정하기 -->
+<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@1,300&display=swap" rel="stylesheet">
+<style type="text/css">
+	/*body에 있는 모든 태그들을 *보다는 body로 지정할 수 있다. */
+	body{
+		/*1순위, 2순위 지정가능*/
+		font-family: '나눔스퀘어', '굴림'; /*(단점) 설치한 폰트를 설정하는 경우, 그 폰트 파일을 모두 가지고 있어야 함*/
+		font-size: 20pt;
+	}
+	
+	div{
+		font-family: 'Jua', sans-serif
+	}
+	
+	p {
+		font-family: 'Roboto Mono', monospace
+	}
+	
+	/*@import 인 경우, 지정한 선택자 위에 url 링크를 그대로 넣어주면 된다*/
+	@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&display=swap');
+	.div01 {
+		font-family: 'Luxurious Roman', cursive
+	}
+	
+</style>
+</head>
+<body>
+	안녕하세요
+	<div>
+		Hello 안녕
+	</div>
+	<p>
+		Hello World~~
+	</p>
+	
+	<div class: "div01">
+		hello bye
+	</div>
+</body>
+</html>

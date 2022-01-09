@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	/* first-child는 같은 자식 내에서 맨 첫번째를 말하는 것*/
+	/* 운좋게 처음 부분에서는 h1이 바로 나와서 색이 변경될 수 있었지만*/
+	h1:first-child{
+		color: red
+	}
+	
+	/*h2에서 본문은 h2가 맨 처음이 아니므로 적용 X
+	  div 에서는 h2가 맨 처음에 나오므로 적용O*/
+	h2:first-child{
+		color: pink
+	}
+	
+	
+	
+	/*그냥 직후 상관없이 처음 나오는 h1을 설정하고 싶다면 (차이점을 잘 알아두기!!!)*/
+	h1:first-of-type{
+		color: olive
+	}
+	h2:last-of-type{
+		color: orange
+	}
+	
+	
+	
+	/*콜론을 그냥 두개 쓰는 연산자가 있음*/
+	/*p 태그 중 맨 처음 나오는 줄*/
+	p::first-line{
+		text-decoration: underline
+	}
+	
+	p::first-letter{
+		font-size: 2em
+		/*'m' 기준 크기로 2배만큼 커짐*/
+	}
+	
+	/*드래그 하는 부분 설정을 바꿀 수 있음!!*/
+	p::selection{
+		background-color: silver
+	}
+	
+	/*div:only-child     -> div태그 안에 자식이 딱 하나 있는 경우 설정 (두개 이상이면 조건 설정X)
+	  div:only-of-type   -> div태그 안 자식 종류가 모두 다 다른 경우 설정(h1 h2 처럼 같은 종류인 태그가 딱 하나 설정O)*/
+</style>
+</head>
+<body>
+	<p>
+		ABCDEFGHIJKLM<br>
+		NOPQRSTUVWXYZ
+	</p>
+	
+	<p>
+		abcdefjhijklmnop<br>
+		qrstuvwxyz
+	</p>
+	
+	<h1>Header-1</h1>
+	<h2>Header-2</h2>
+	<h3>Header-3</h3>
+	<h4>Header-4</h4>
+	<h1>Header-1</h1>
+	<h2>Header-2</h2>
+	<h6>Header-6</h6>
+	<div>
+		<h2>Sub-2</h2>
+		<h1>Sub-1</h1>
+	</div>
+	
+</body>
+</html>

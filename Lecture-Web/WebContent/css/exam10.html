@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	div{
+		width: 500px;
+		height: 500px;
+		background-color: pink;
+	}
+	
+	img{
+		/*div크기를 잘 모를수도 있음 -> div크기에 맞춰서 100%로 설정!*/
+		width: 80%;
+		height: 80%;
+		margin: 10%; /*남은 여백의 절반씩 마진을 두르면 가운데에 넣을 수 있음*/
+	}
+</style>
+</head>
+<body>
+	<div>
+		<!-- 절대 경로 : /Lecture-Web/html/images/dog2.jpeg
+			  상대 경로 : ../html/images/dog2.jpeg (상위폴더로 이동한 후, images 폴더로 이동) -->
+		<img src="../html/images/dog2.jpeg">
+	</div>
+
+</body>
+</html>

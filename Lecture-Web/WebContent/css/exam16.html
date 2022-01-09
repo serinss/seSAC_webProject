@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#numberlist li{
+		list-style-type: lower-roman;
+		font-size: 16pt;
+		/*disk 디폴트 , none, lower-roman 등등 설정 바꿀 수 있음*/
+		float: right;
+		margin: 0px 20px 0px 20px;
+		/*top 을 기준으로 시계방향 순서대로 설정 가능*/
+	}
+	
+	/*연속된 리스트에서 설정 = 가상 선택자*/
+	/*첫번째 자식만 설정*/
+	li:first-child{
+		color : orange
+	}
+	
+	li:last-child{
+		color : pink
+	}
+	
+	/*수열 적용도 설정 가능*/
+	li:nth-child(2n){
+		color : green
+	}
+	
+	a{
+		margin: 30px;
+	}
+	
+	a:link{
+		color: pink;
+		text-decoration: none;
+		/*underline : default*/
+	}
+	
+	a:visited{
+		color: pink
+	}
+	
+	/*마우스를 가져다대면 손모양으로 바뀜 -> 그 상태가 hover*/
+	a:hover{
+		background-color: lightgray
+		text-decoration: underline;
+	}
+	
+	p{
+		clear: both
+		/*clear : right*/
+		/*float 설정이 left or right 모를 수 있으므로 both가 자주 쓰임*/
+	}
+</style>
+</head>
+<body>
+
+	<ul id="numberlist">
+		<li>ONE</li>
+		<li>TWO</li>
+		<li>THREE</li>
+		<li>FOUR</li>
+		<li>FIVE</li>
+		<li>SIX</li>
+		<li>SEVEN</li>
+		<li>EIGHT</li>
+		<li>NINE</li>
+		<li>TEN</li>
+	</ul>
+	
+	<!-- ul 태그 float 설정을 해둬서 p태그가 옆으로 뜸 -> 무효화 필요! -->
+	<p>
+		<a href="http://www.naver.com">NAVER</a>
+		<a href="http://www.daum.net">DAUM</a>
+	</p>
+	
+</body>
+</html>

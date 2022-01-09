@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+/*input에 type=password라는 속성이 있으면 배경값을 넣도록 설정*/
+	input[type=password]{
+		background-color: gray;
+	}
+	
+	img{
+		width: 200px;
+		height: 200px;
+		border: 3px solid pink;
+	}
+	
+	img[src^="../"]{
+		border: 3px solid blue;
+	}
+	
+	img[src $= 'gif']{
+		border: 3px solid green;
+	}
+	
+	img[src *= cute]{
+		border: 3px solid orange;
+	}
+	
+</style>
+</head>
+<body>
+	<form>
+		아이디 &nbsp;&nbsp;&nbsp;: <input type="text"><br>
+		패스워드 : <input type="password"><br>
+	</form>
+	<br>
+	<img src="/Lecture-Web/html/images/dog2.jpeg">
+	<img src="../html/images/dog.jpg">
+	<img src="../html/images/dog3.gif">
+	<img src="../html/images/cutedog4.gif">
+	
+</body>
+</html>
