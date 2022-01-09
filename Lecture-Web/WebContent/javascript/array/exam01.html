@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let array = ['A', 123, 12.34, 'Hello', true] //여러 개의 타입을 모두 넣을 수 있음
+	
+	
+	document.write(`첫번째 요소: ${ array[0] }<br>`)
+	document.write(`두번째 요소: ${ array[1] }<br>`)
+	document.write(`세번째 요소: ${ array[2] }<br>`)
+	document.write(`네번째 요소: ${ array[3] }<br>`)
+	document.write(`다섯번째 요소: ${ array[4] }<br>`)
+	document.write(`여섯번째 요소: ${ array[5] }<br>`) //에러메세지 출력이 아니라 undefined로 출력
+	document.write('=====================================<br>')
+	
+	array[8] = false //중간 내용은 자동으로 빈 상태로 - List처럼 유연!
+	
+	document.write(array+'<br>') //전체 출력
+	document.write('원소개수: ' + array.length + '개<br>') //9개
+	document.write('=====================================<br>')
+	
+	
+	array[array.length] = "add" //중간에 구멍이 뚫리지 않도록 차곡차곡 넣고 싶은 경우 array.length자리에 넣으면 됨
+	document.write(`add추가 후 배열 개수: ${array.length}개<br>`)
+	//매번 이렇게 쓰기 귀찮을 수 있음
+	
+	array.push('end') //배열의 맨 마지막에 요소를 넣는 메서드
+	document.write(`end추가 후 배열 개수: ${array.length}개<br>`)
+	document.write(array+'<br>')
+	document.write('=====================================<br>')
+	
+	
+	let data = array.pop() //배열의 맨 마지막 요소를 삭제하는 메서드
+	document.write(`삭제된 원소: ${data}<br>`)
+	document.write(array+'<br>')
+	document.write('=====================================<br>')
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

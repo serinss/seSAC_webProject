@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let names = ['홍길동', '박길동', '윤길동', '강길동', '현길동']
+	
+	document.write('< 방법1 - 기존 for문 방식 ><br>')
+	for(let i=0; i<names.length; i++){
+		document.write(names[i]+'<br>')
+	}
+	document.write('======================<br>')
+	
+	document.write('< 방법2 - for(in)사용 방식 ><br>')
+	//i = index 
+	for(let i in names){
+		document.write(names[i]+'<br>')
+	}
+	document.write('======================<br>')
+	
+	document.write('< 방법3 - for(of)사용 방식><br>')
+	//java의 for each문과 비슷
+	for(let name of names){		
+		document.write(name+'<br>')
+	}
+	document.write('======================<br>')
+	
+	document.write('< 방법4 - forEach 함수 사용 방식(SE6)><br>')
+	//names 배열의 원소 개수만큼 forEach에 입력된 함수 호출
+	//배열의 요소를 끝까지 하나씩 출력한다
+	//넣어줄 때, names는 꼭 다 안써도 됨!
+	names.forEach(function(element, index, names){
+		document.write(element+ '<br>')
+	})
+	document.write('======================<br>')
+	
+	document.write('< 방법5 - 정렬 데이터 ><br>')
+	names.sort
+	names.forEach(function(element, index, names){
+		document.write(element+ '<br>')
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

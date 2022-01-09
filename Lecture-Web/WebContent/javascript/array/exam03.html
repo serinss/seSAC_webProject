@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	
+	document.write('>>얕은 복사를 한 경우<br>')
+	let array = [10, 20, 30]
+	
+	let copyArray1 = array 
+	//shallow copy(얕은 복사) - 즉 같은 객체를 가리키는 중(주소값만 복사된 상태)
+	
+	document.write(`array: ${array}<br>`)
+	document.write(`copyArray1: ${copyArray1}<br><br>`)
+	
+	document.write('>>copyArray의 값 변경<br>')
+	copyArray1[1] = 2000
+	document.write(`array: ${array}<br>`)
+	document.write(`copyArray1: ${copyArray1}<br>`)
+	//10, 2000, 30 으로 값을 바꿔버리는 순간 array도 가리키고 있던 배열객체도 동일하므로 동일하게 변경됨
+	//---> 얕은 복사는 의미가 없다
+	document.write('=====================================<br>')
+	
+	document.write('>>깊은 복사를 한 경우<br>')
+	let array2 = [10, 20, 30]
+	//deep copy(깊은 복사)
+	let copyArray2 = []
+	for(let data of array2){
+		copyArray2.push(data)
+	}
+	document.write(`array2: ${array2}<br>`)
+	document.write(`copyArray2: ${copyArray2}<br><br>`)
+	
+	
+	document.write('>>copyArray의 값 변경<br>')
+	copyArray2[1] = 2000
+	document.write(`array2: ${array2}<br>`)
+	document.write(`copyArray2: ${copyArray2}<br>`)
+	
+	document.write('=====================================<br>')
+	
+	//깊은 복사를 더 쉽게 하는 방법
+	let copyArray3 = [...array2] //전개 연산자
+	
+	document.write(`array2: ${array2}<br>`)
+	document.write(`copyArray3: ${copyArray3}<br><br>`)
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>
