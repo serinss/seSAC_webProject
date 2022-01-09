@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	let d = new Date()
+	let hour = d.getHours() //내장함수 사용, 여기선 자동완성되지 않지만 웹의 개발자도구 콘솔창에서는 자동완성 가능
+	
+	if(hour < 12){
+		alert('오전')
+	} else if(hour < 18){
+		alert('오후')
+	} else{
+		alert('저녁')
+	}
+	
+	//확인&취소를 선택할 수 있는 팝업창
+	confirm('쉬는시간을 가질까요?')
+	//확인 = return true , 취소 = return false
+	
+	//모달 창 (부트스트랩에 존재) 으로 팝업하면 hocalhost 9999: 이름으로 안뜸
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

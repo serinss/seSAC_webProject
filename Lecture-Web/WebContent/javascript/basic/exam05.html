@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var num = prompt('정수를 하나 입력하세요')
+	alert(typeof num) //string 출력
+	num = Number(num) //숫자로 변환
+	alert(typeof num) //number 출력
+	
+	//방법 1 (if문)
+	if(num % 2 == 0){
+		alert('짝수')
+	} else{
+		alert('홀수')
+	}
+	
+			
+	//방법2 (switch문)
+	switch(num%2){
+	case 0:
+		alert('짝수')
+		break;
+	case 1:
+		alert('홀수')
+		break;
+	}
+	
+	//방법3 (삼항연산문)
+	var msg = (num%2==0?'짝수':'홀수')
+	alert(num+ ' 는 ' + msg)
+	
+	
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

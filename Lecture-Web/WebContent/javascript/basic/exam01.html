@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 순서: CSS(style)설정 후 Javascript(script) -->
+
+
+
+<!-- script는 자바 스크립트 실행 용도 -->
+<script>
+	/*실제 body에 직접 쓰지 않아도 보이게 할 수 있다.*/
+	document.write('안녕하세요<br>')
+</script>
+</head>
+<body>
+	Hello<br>
+	<!-- 무조건 순서는 위에서부터 아래로 실행되므로 안녕하세요->Hello 출력 -->
+	
+	<!-- 스크립트는 head body 둘 다 사용 가능, 웬만하면 head쪽에 쓰기는 함(분리해서 적용)-->
+	<script type="text/javascript">
+		document.write('bye')
+	</script>
+	
+	
+	
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+//  출력 방법
+//1.document.write()
+//2.console.log()
+//3.alert()
+	
+	
+	var a = 10 //모든 변수의 타입은 var로 통일
+	var b = 'hello'
+	c = 12.34
+	
+	
+	//alert : 실행 할때마다 경고창 띄우기
+	//alert('hey') 
+	//alert(b)
+	alert(c)
+	
+	alert(typeof a) //a 가 어떤 자료형인가?를 알려줌 -> number 출력
+	alert(typeof true) //boolean 출력
+	alert(typeof null) //object 출력
+	alert(typeof undefined) //초기화되지 않은 상태
+	//var d
+	//undefined
+	alert(typeof "hello") //String 출력
+	alert(typeof 'A') //String 출력 -----> 문자, 문자열의 구분X
+	alert(typeof '123') //String 출력 ---> 정수형으로 인식하고 싶다면?
+	alert(typeof Number('123')) //number 출력
+	alert(typeof a.toString()) //string 출력 10 -> '10'
+	
+	
+	console.log('a : '+a) //콘솔창(F12 개발자도구)에 출력할 수 있는 메서드
+	document.write('a : '+a+'<br>')
+	
+	
+	
+	var hobby = '음악감상'
+	alert(hobby)
+	var hobby = '영화감상' //에러 안남!! java에서는 hobby='영화감상' 이어야 하지만 타입선언에 구속받지 않고 유연함
+	var hobby = '등산' //모두 가능
+	
+	
+	
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

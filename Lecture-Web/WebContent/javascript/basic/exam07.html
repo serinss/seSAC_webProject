@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	var a=10
+	alert(`a: ${a}`)
+	//ecma script 6 버전에 새로 추가된 것들을 알아놓기
+	//var 선언과 alert출력의 순서가 바뀌어도 에러가 나오진 않고 undefined로 출력이 되긴 함! -> 변수 호이스팅(hoisting)
+	//인터프리터가 변수와 함수의 메모리 공간을 선언 전에 미리 할당하는 것을 의미합니다. var로 선언한 변수의 경우 호이스팅 시 undefined로 변수를 초기화합니다.
+	//let과 const로 선언한 변수의 경우 호이스팅 시 변수를 초기화하지 않습니다.
+	//이건 아주 일부분
+	//"변수의 선언과 초기화를 분리한 후, 선언만 코드의 최상단으로 옮기는" 것
+	
+	//var형은 변수 라이프사이클이 블록스코프 형태가 아니다. 
+	//추가된 변수 선언 방식인 let,const는 블록스코프 형태임
+	
+	
+	
+	//왜 호이스팅이 안되도록 새로 만들었나? 더 편한거 아닌가?
+	//다른 내용이 많으므로 제대로 알아보기!
+	
+	//alert(`a: ${a}, b: ${b}, c: ${c}`) //레퍼런스 에러! 뜨지 않음
+	let b=20
+	const c=30 //변수 c를 상수화 시킴
+	alert(`a: ${a}, b: ${b}, c: ${c}`) //출력O
+	
+	a = a+50
+	b = b+50
+	//c = c+50 //변경, 대입 불가 , 재선언도 당연 불가
+	//alert(`a: ${a}, b: ${b}, c: ${c}`) //출력X - 에러는 무조건 콘솔창 메세지를 확인해야 한다
+	
+	var a=100
+	//let b=200 //재선언 불가
+	//alert(`a: ${a}, b: ${b}, c: ${c}`)
+	
+	{
+		var temp = 1000
+		let letTemp = 2000
+		alert(`temp: ${temp}, letTemp: ${letTemp}`)
+	} //블럭 안에서 선언된 변수는 블럭이 종료되면 사라진다 = 블록스코프
+	
+	//alert(`temp: ${temp}, letTemp: ${letTemp}`)
+	alert(`temp: ${temp}`) //이거는 출력 가능
+	
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
