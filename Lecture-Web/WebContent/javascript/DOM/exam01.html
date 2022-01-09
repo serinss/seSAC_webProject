@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*
+ * DOM (Document Object Model : 문서 객체 모델)
+ */
+ 
+ //body에 있는 tag들을 관리하고 싶으므로, 미리 모두 가져와야 함 -> onload
+ window.onload = function(){
+	 
+	 //매우 중요!!! text를 추출하여 수정할 일이 많이 생길 것!
+	 
+	 //body의 html 코드만 추출하기
+	 alert(document.body.innerHTML) //방법1 - 모든 body의 글자들을 추출해줌
+	 alert(document.body.innerText) //방법2 - 깔끔하게 마크업 문자 제외 글자만 추출해줌
+	 
+ 	 let tags = ''
+ 	 	 tags += '<ul>'
+ 	 	 tags += '	<li>red</li>'
+ 	 	 tags += '	<li>green</li>'
+ 	 	 tags += '	<li>blue</li>'
+ 	 	 tags += '</ul>'
+ 	 	 
+ 	 //document.body.innerHTML = tags 
+ 	 //body에 입력한 tags 내용을 넣겠다 (기존의 내용은 교체됨)
+ 	 
+ 	 //document.body.innerText = tags 
+ 	 //일반 텍스트로 인식했으므로 모두 문자열 형태로만 나열됨
+ 	 
+ 	 document.body.innerHTML += tags 
+ 	 //뒤쪽에 붙이기
+ 	 
+ }
+
+</script>
+</head>
+<body>
+	<h1>안녕하세요</h1>
+	Hello
+
+</body>
+</html>

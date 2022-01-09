@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+/*
+ * 브라우저 객체 모델(Browser Object Model)
+ *  - 문서에 대한 모든 내용을 담고있는 객체. 도큐먼트에 관련 된 내용 모두
+	- 문서 즉 열려진 페이지에 대한 정보를 따로 객체화 시켜서 관리함
+	
+	객체 최상위 window객체가 계속 돌고 있음  ex. window.alert('!!!') 인셈
+	- window
+		- location 객체   : 홈페이지 주소
+		- navigator 객체  : 이전, 다음 
+		- history 객체
+		- screen 객체    : 웹 화면 전체
+		- document 객체   : 웹 내용 출력
+ */
+
+	var aaa = 10
+	bbb = 20 //자료형을 안써도 되는 이유는, window에서 받아주고 있기 때문이었음!
+	//alert(`a: ${aaa}, b: ${bbb}`)
+	
+	let sub = window.open("","","width=400, height=300") //새로운 팝업 창
+	if(!sub){
+		alert('팝업창 옵션을 확인하세요')
+	}
+	
+	sub.moveTo(400,100)
+		
+	/* 1초에 한 번씩 (20,20) 만큼 이동하기
+	setInterval(function(){
+		sub.moveBy(20,20)
+	}, 1000)
+	*/
+	
+	//팝업창의 크기를 화면 크기를 전체 창크기로 변경하기
+	//콘솔창에 window 치면 검색해서 내용을 볼 수 있음
+	/*let width = screen.width //현재 해상도만큼 1560x1440 만큼 가져오는 것
+	let height = screen.height
+	sub.resizeTo(width, height)
+	*/
+	
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

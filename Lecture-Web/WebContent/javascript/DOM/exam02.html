@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table{
+		width: 200px;
+		height: 200px;
+	}
+</style>
+<!-- CSS -> SCRIPT 순서 -->
+<script>
+	window.onload = function(){
+		let id = document.getElementById('id')
+		id.innerText = '아이디'
+		
+		//아이디의 선택자 표현은 #아이디명
+		//클래스의 선택자 표현은 .클래스명
+		let pass = document.querySelector('.password')
+		pass.innerText = '패스워드'
+	}
+</script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td id="id">ID</td>
+		</tr>
+		<tr>
+			<td class="password">PASSWORD</td>
+			<!-- id아닌 class로 지정한다면 getElementById 불가 -->
+		</tr>
+	</table>
+	
+	
+</body>
+</html>

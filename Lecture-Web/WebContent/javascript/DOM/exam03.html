@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	table{
+		width: 200px;
+		height: 200px;
+	}
+</style>
+<!-- CSS -> SCRIPT 순서 -->
+<script>
+	window.onload = function(){
+		//tag 이름으로 요소를 가져오기 - 수가 많으므로 elements라고 쓴다
+		//리턴형 : 배열 -> 인덱스로 텍스트만 추출하여 변경가능
+		let tags = document.getElementsByTagName('td')
+		tags[0].innerText = '아이디'
+		tags[1].innerHTML = '패스워드'
+	}
+</script>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td>ID</td>
+		</tr>
+		<tr>
+			<td>PASSWORD</td>
+		</tr>
+	</table>
+	
+	
+</body>
+</html>
