@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	
+	//선언적 함수(or 함수 선언식: 직접 함수 이름을 붙여서 생성)
+	//반환형이 필요하지 않음 모두 var
+	function test() {
+		alert('call')
+	}
+	
+	function testFunc(data){
+		alert('data: '+data)
+	}
+	
+	function testFunc2(data, data2){
+		alert(`data: ${data}, data2: ${data2}`)
+	}
+	
+	function sum(a,b){
+		return a+b
+	}
+	
+	
+	
+	
+	
+	//모두 동일한 자료형이므로 temp가 가질 수 있음
+	var temp = function func(){
+		alert('call func()')
+	}
+	
+	//익명함수(or 함수 표현식) ===> 아주 많이 쓰임!!
+	var func01 = function(){
+		alert('call func01')
+	}
+	
+	
+	
+	
+	
+	var aaa = function(){
+		alert('익명함수 aaa 호출')
+	}
+	
+	function aaa(){
+		alert('선언적 함수 aaa 호출')
+	}
+	
+	//선언적 함수가 호출되어야 할 것 같지만, 익명함수의 우선순위가 더 높다!
+	aaa()
+	
+	
+	
+	
+	//익명함수 쓰는 방법
+	//==> 콜백함수
+	//let f = functionc testFunc() { } 과 동일
+	function callbackFunc(f){
+		f() //함수의 이름을 넣는대로 실행시킬 수 있음
+	}
+	
+	callbackFunc(test)
+	callbackFunc(temp)
+	
+	//매개변수에 익명함수 선언부 자체를 넣을 수도 있음
+	callbackFunc(function(){
+		alert('익명함수 호출')
+	})
+	
+	
+	
+	
+	
+	
+	//let total = sum(10, 20)
+	//alert('총합: '+total)
+		
+	//함수 오버로딩 지원 X -> 오직 구분은 함수명으로만 한다
+	test()
+	testFunc(10)
+	testFunc2(4,9)
+	
+	//func() 으로 호출하면 안됨
+	temp() //temp명으로 호출해야함
+	func01()
+	
+	
+	
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

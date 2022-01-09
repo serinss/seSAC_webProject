@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	function func(a, b){
+		console.log('arguments: '+ arguments.length, arguments[0], arguments[1])
+		//arguments: 0 undefined undefined
+		//arguments: 1 hello undefined
+		//arguments: 2 10 20
+		
+		console.log(a, b)
+		//undefined undefined
+		//hello undefined
+		//10 20
+	}
+	
+	//함수 호출 방식 정해져있지 않음!! 즉, 매개변수에 상관없이 뭘 넣든 실행되는 것
+	func() 
+	func('hello') 
+	func(10,20) 
+	//넣어준 변수들을 배열처럼 접근 가능 --> arguments로 알 수 있다
+	
+	
+	
+	
+	
+	
+
+</script>
+</head>
+<body>
+
+</body>
+</html>
