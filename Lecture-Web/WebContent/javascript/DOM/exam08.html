@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		let btn = document.querySelector('#btn')
+		let span = document.querySelector('span')
+		
+		//DOM2 level 2 , 표준 이벤트 모델
+		//addEventListener(이벤트속성, handler(속성 실행 시, 구성), capturing 사용유무)
+		//이벤트 버블링이 자동 발생 span발생 -> button 발생
+		btn.addEventListener('click', function(){
+			alert('btn click')
+		}, true) //button 발생 -> span 발생
+		
+		span.addEventListener('click', function(){
+			alert('span click')
+		})
+	
+	}
+</script>
+</head>
+<body>
+	<button id="btn"><span>CLICK!</span></button>
+</body>
+</html>

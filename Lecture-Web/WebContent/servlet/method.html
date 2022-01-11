@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<!-- form tag : 입력받은 정보를 서버로 전달하는 것이 목적 -->
+	<form action="/Lecture-Web/method" method="get">  
+		ID : <input type="text" name="id">
+		<input type="submit" value="GET 방식호출">
+	</form>
+	<!-- Servlet, mapping 까지 완료하면 해당 정보를 가지고 url로 이동할 수 있게 된다 -->
+	
+	
+	<form action="/Lecture-Web/method" method="post"> 
+		ID : <input type="text" name="id">
+		<input type="submit" value="POST 방식호출">
+	</form>
+</body>
+</html>

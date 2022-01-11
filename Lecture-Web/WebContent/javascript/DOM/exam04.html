@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		//document.write('<h1>Hello</h1>')
+		//단일태그로 넣는 것만 가능 <div>태그 속에 넣기는 불가
+		let h1Tag = document.createElement('h1') //<h1></h1> 태그 생성
+		let h1TagText = document.createTextNode('hello') //태그 사이의 텍스트를 생성
+		
+		h1Tag.appendChild(h1TagText) //h1 - hello
+		document.body.appendChild(h1Tag) //body - h1 - hello 구조를 이룰 때 appendChild 사용
+		
+		
+		let aTag = document.createElement('a')
+		//aTag.href = 'http://www.daum.net'
+		//aTag.target = '_blank'
+		//속성값 지정하는 방법 1. 점으로 접근 2. setAttribute 함수로 접근
+		aTag.setAttribute('href', 'http://www.daum.net')
+		aTag.setAttribute('target', '_black')
+		
+		let imgTag = document.createElement('img')
+		imgTag.src='https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png'
+		//document.body.appendChild(imgTag)
+		
+		aTag.appendChild(imgTag)
+		document.body.appendChild(aTag)
+		
+		
+	}
+</script>
+</head>
+<body>
+	<!-- <h1>Hello</h1>  쓰고싶은 태그를 javascript를 이용해 동적으로 만들기 -->
+	<!-- <img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"> -->
+	<!-- <a href="http://www.daum.net"><img src="https://t1.daumcdn.net/daumtop_chanel/op/20200723055344399.png"></a> -->
+</body>
+</html>

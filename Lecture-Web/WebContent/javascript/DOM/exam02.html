@@ -17,7 +17,8 @@
 		
 		//아이디의 선택자 표현은 #아이디명
 		//클래스의 선택자 표현은 .클래스명
-		let pass = document.querySelector('.password')
+		//복수 개가 있어도 체일 처음에 나온 element 하나만 뽑아낸다
+		let pass = document.querySelector('.password') //+querySelectorAll
 		pass.innerText = '패스워드'
 	}
 </script>

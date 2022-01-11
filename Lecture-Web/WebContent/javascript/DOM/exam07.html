@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	window.onload = function(){
+		//각각의 태그에 클릭 이벤트 설정
+		let div = document.querySelector('div')
+		let h1 = document.querySelector('h1')
+		let span = document.querySelector('span')
+		
+		//이벤트 버블링 (bubbling 자식 이벤트 발생 -> 동일한 이벤트가 부모에게도 있을 경우 같이 실행) 
+		//  <-> 이벤트 캡처링(capturing 부모 이벤트 -> 자식 이벤트)
+		span.onclick = function(){
+			alert('span click!')
+		}
+		
+		//버블링을 원치 않는 경우는?
+		h1.onclick = function(e){
+			alert('h1 click!')
+			//console.log(e) PointerEvent {isTrusted: true, pointerId: 1, width: 1, height: 1, pressure: 0, …}
+			//e 는 이벤트를 발생시킬 때의 그 정보들을 가지고 있음
+			e.cancelBubble = true //버블링 멈춰!
+		}
+		div.onclick = function(e){
+			alert('div click!')
+			e.cancelBubble = true
+		}
+		
+	}
+</script>
+</head>
+<body>
+	<div>
+		<h1>
+			<span>Hello</span>
+		</h1>
+	</div>
+</body>
+</html>

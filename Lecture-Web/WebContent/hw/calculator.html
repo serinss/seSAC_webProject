@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	#display{
+		text-align: right
+	}
+</style>
+<script>
+	//사칙연산 기능들이 연속으로 쓰이지 않도록
+	//기능, 스타일 더 추가해보기
+	function add(obj){
+		let display = document.getElementById("display")
+		
+		if(obj == 'clear'){
+			display.value = ''
+			
+		} else if(obj == "="){
+			display.value = eval(display.value)
+			
+		} else if(obj == '%'){
+			//퍼센트일때 작성
+			
+		} else{
+			display.value += obj
+			
+		}
+	}
+	
+</script>
+<style type="text/css">
+	#squalbtn{
+		width: 240px;
+		height: 100px;
+	}
+</style>
+</head>
+<body>
+	<table border="1">
+		<tr>
+			<td colspan="4">
+				<input type="text" id="display">
+			</td>
+		</tr>
+		<tr>
+			<td><button value = "7" onclick = "add(this.value)">7</button></td>
+			<td><button value = "8" onclick = "add(this.value)">8</button></td>
+			<td><button value = "9" onclick = "add(this.value)">9</button></td>
+			<td><button value = "/" onclick = "add(this.value)">/</button></td>
+		</tr>
+		<tr>
+			<td><button value = "4" onclick = "add(this.value)">4</button></td>
+			<td><button value = "5" onclick = "add(this.value)">5</button></td>
+			<td><button value = "6" onclick = "add(this.value)">6</button></td>
+			<td><button value = "*" onclick = "add(this.value)">*</button></td>
+		</tr>
+		<tr>
+			<td><button value = "1" onclick = "add(this.value)">1</button></td>
+			<td><button value = "2" onclick = "add(this.value)">2</button></td>
+			<td><button value = "3" onclick = "add(this.value)">3</button></td>
+			<td><button value = "-" onclick = "add(this.value)">-</button></td>
+		</tr>
+		<tr>
+			<td><button value = "0" onclick = "add(this.value)">0</button></td>
+			<td><button value = "." onclick = "add(this.value)">.</button></td>
+			<td><button value = "+" onclick = "add(this.value)">+</button></td>
+			<td><button value = "%" onclick = "add(this.value)">%</button></td>
+		</tr>
+		<tr>
+			<td colspan="2"><button value = "=" onclick = "add(this.value)">=</button></td>
+			<td colspan="2"><button value = "clear" onclick = "add(this.value)">Clear</button></td>
+		</tr>
+	</table>
+	<script>
+		/*function add(char) {
+            var display = document.getElementById('display');
+            display.value = display.value + char;
+        }*/
+		
+		/*function cal(){
+			var display = document.getElementById('display');
+			display.value = eval(display.value);
+		}
+		
+		function reset(){
+			var display = document.getElementById('display');
+			display.value = "";
+		}
+		*/
+		
+	</script>
+</body>
+</html>
